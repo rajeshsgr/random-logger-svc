@@ -9,11 +9,8 @@ import java.util.Random;
 
 @RestController
 public class RandomLoggerResource {
-
     private static final Logger logger = LoggerFactory.getLogger(RandomLoggerResource.class);
-
     private Random random = new Random();
-
     @Scheduled(fixedRate = 1000)
     public void logRandomMessage() {
         int randomInt = random.nextInt();
